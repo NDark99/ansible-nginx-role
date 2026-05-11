@@ -1,7 +1,6 @@
 ---
 galaxy_info:
   role_name: nginx_role
-  namespace: ndark99
   author: Borys Babicz
   description: Simple Ansible role that installs and configures Nginx on Debian and Ubuntu.
   license: MIT
