@@ -1,0 +1,21 @@
+---
+- name: Install nginx
+  apt:
+    name: nginx
+    state: present
+    update_cache: yes
+  become: yes
+
+- name: Start nginx service
+  service:
+    name: nginx
+    state: started
+    enabled: yes
+  become: yes
+
+- name: Create custom index.html
+  copy:
+    content: |
+      <h1>Nginx installed by Ansible Role!</h1>
+    dest: /var/www/html/index.html
+  become: yes
